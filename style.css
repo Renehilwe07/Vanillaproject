@@ -1,0 +1,63 @@
+  body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+
+        .weather-container {
+          background-color: rgb(118, 187, 247); 
+          max-width: 700px;
+          height: 450px;
+          margin: 60px auto; 
+          padding: 40px;
+          border-radius: 10px;
+        }
+
+        input {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;    
+        }
+
+        .input-search {
+            width: 80%;
+            font-size: 16px;
+        }
+
+        .search-bar {
+            width: 100px;
+            height: 50px;
+            color: aliceblue;
+            background-color: rgb(239, 239, 105);
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: 800;
+        }
+
+        .report{
+            font-weight: 35px;
+            color: rgb(12, 12, 12);
+        }
+
+        strong {
+            color:brown;
+        }
+
+        p{
+           font-weight: bold;
+           font-size: 60px;
+        }
+
+        .proper {
+            font-size: 30px;
+            position: relative;
+            top: -38px;
+            font-weight: 30;
+        }
+
+        .incase{
+            display: flex;
+            align-items: center;
+            gap: 200px;
+        }

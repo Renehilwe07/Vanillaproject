@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>Weather Application</title>
+</head>
+<body>
+    <header>
+       <form id="search-form">
+        <div class="weather-container">
+    <input placeholder="Enter a city..." required class="input-search" id="input-search" type="search">
+    <input type="submit" value="Search" class="search-bar">
+        </form>
+    <br />
+    <h1  class="current-city" id="current-city">Paris</h1>
+    <div class="incase">
+    <div class="report">
+        <span id="current-date"></span>,
+        moderate rain
+        <br />
+        Humidity:
+        <strong>
+            73%
+        </strong>
+        , Wind: 
+        <span>
+            <strong>
+                6.4km/h
+            </strong>
+        </span>
+    </div>
+    <div>
+    <p>🌦️<span class="value">17</span><span class="proper">˚C</span></p>
+    </div>
+    </div>
+    <footer>
+        This project is coded by
+        <a href="#" target="_blank">Renehilwe Maleka</a> and is
+        <a href="https://github.com/Renehilwe07" target="_blank"> on Github</a>
+    </footer>
+</div>
+</header>
+<script src="index.js"></script>
+</body>
+</html>
