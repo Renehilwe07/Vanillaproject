@@ -15,7 +15,10 @@
 
       let temperatureElement = document.querySelector(".value");
       temperatureElement.innerHTML = `${response.data.temperature.current}`;
+
+      fetchForecast(response.data.city)
     }
+
   
     function formatDate(date) {
       let minutes = date.getMinutes();
@@ -45,7 +48,7 @@
 }
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit",search);
 
 let currentDateElement = document.querySelector("#current-date");
 let currentDate = new Date();
@@ -56,7 +59,8 @@ currentDateElement.innerHTML = formatDate(currentDate);
 
 function fetchForecast(city){
   let apiKey = "b99t41fb7bao38b2a301ca5200fbfdb3";
-  let apiUrl = "https://api.shecodes.io/weather/v1/forecast?query=${city}&key=b99t41fb7bao38b2a301ca5200fbfdb3&units=metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  
   axios(apiUrl).then(displayForecast);
 
 }
@@ -70,7 +74,6 @@ function formatDay(timestamp){
 
 function displayForecast(response){
   console.log(response.data);
-  let forecastElement = document.querySelector("#forecast");
 
   let forecastHtml = "";
 
@@ -88,12 +91,13 @@ function displayForecast(response){
     }
   });
 
+  let forecastElement = document.querySelector("#forecast")
   forecastElement.innerHTML = forecastHtml;
 
 }
 
-fetchForecast();
-
+search("Paris")
+displayForecast();
 
 
 
